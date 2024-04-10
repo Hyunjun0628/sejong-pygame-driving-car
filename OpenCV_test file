@@ -1,0 +1,15 @@
+import cv2
+
+cap = cv2.VideoCapture(0)  # 웹캠 인덱스 조정이 필요할 수 있습니다.
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Failed to grab frame")
+        break
+    cv2.imshow('Webcam Test', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
