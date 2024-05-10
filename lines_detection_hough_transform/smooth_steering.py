@@ -75,7 +75,7 @@ def display_heading_line(frame, steering_angle, line_center_x, left_line_distanc
     return frame
 
 # 비디오 파일 열기
-video = cv2.VideoCapture("kmu_track.mp4")
+video = cv2.VideoCapture("road_car2_view.mp4")
 
 while True:
     ret, frame = video.read()
